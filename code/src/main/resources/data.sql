@@ -1,0 +1,13 @@
+INSERT INTO PERSON (FIRST_NAME, LAST_NAME, EMAIL_ADDRESS) VALUES ('George', 'Washington', 'gwashington@wh.gov');
+INSERT INTO PERSON (FIRST_NAME, LAST_NAME, EMAIL_ADDRESS) VALUES ('John', 'Adams', 'gadams@wh.gov');
+INSERT INTO PERSON (FIRST_NAME, LAST_NAME, EMAIL_ADDRESS) VALUES ('Thomas', 'Jefferson', 'tjefferson@wh.gov');
+INSERT INTO PERSON (FIRST_NAME, LAST_NAME, EMAIL_ADDRESS) VALUES ('James', 'Madison', 'jmadison@wh.gov');
+INSERT INTO PERSON (FIRST_NAME, LAST_NAME, EMAIL_ADDRESS) VALUES ('James', 'Monroe', 'jmonroe@wh.gov');
+INSERT INTO PERSON (FIRST_NAME, LAST_NAME, EMAIL_ADDRESS) VALUES ('John Quincy', 'Adams', 'jqadams@wh.gov');
+INSERT INTO PERSON (FIRST_NAME, LAST_NAME, EMAIL_ADDRESS) VALUES ('Andrew', 'Jackson', 'ajackson@wh.gov');
+INSERT INTO PERSON (FIRST_NAME, LAST_NAME, EMAIL_ADDRESS) VALUES ('Martin', 'Van Buren', 'mvanburen@wh.gov');
+INSERT INTO PERSON (FIRST_NAME, LAST_NAME, EMAIL_ADDRESS) VALUES ('William', 'Harrison', 'wharrison@wh.gov');
+INSERT INTO TASK(PERSON_ID, TASK, COMPLETED) VALUES (1, 'Win Revolutionary War', TRUE);
+INSERT INTO TASK(PERSON_ID, TASK, COMPLETED) VALUES (1, 'Step down as General', TRUE);
+INSERT INTO TASK(PERSON_ID, TASK, COMPLETED) VALUES (3, 'Write Declaration of Independence', TRUE);
+INSERT INTO TASK(PERSON_ID, TASK, COMPLETED) VALUES (4, 'Write Constitution of the United States of America', TRUE);
