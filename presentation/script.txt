@@ -1,5 +1,54 @@
-1. Show initial state of working web service
+0. Show initial state of working web service
   * localhost:8080/people
   * localhost:8080/people/1
 
-PHASE 1 - Add Swagger
+1. PHASE 1 - Add Swagger
+Dependency Management Additions
+      <dependency>
+           <groupId>io.springfox</groupId>
+           <artifactId>springfox-swagger2</artifactId>
+           <version>2.7.0</version>
+       </dependency>
+       <dependency>
+           <groupId>io.springfox</groupId>
+           <artifactId>springfox-swagger-ui</artifactId>
+           <version>2.7.0</version>
+       </dependency>
+
+Enable Annotation
+  @EnableSwagger2
+
+Run Application
+  http://localhost:8080/swagger-ui.html
+
+  **Explain the end points and why they aren't very helpful but you get something at least
+
+2. Phase 2 - Improve Swagger
+
+  @Bean
+  public Docket docket(){
+    return new Docket(DocumentationType.SWAGGER_2)
+              .select().apis(RequestHandlerSelectors.basePackage("com.frankmoley.talks.swagger.webservice"))
+              .build();
+  }
+
+  Run Application
+    http://localhost:8080/swagger-ui.html
+
+Add API Info to Docket
+  **Create Method**
+  private ApiInfo getApiInfo(){
+     String title = "Personal Task Services";
+     String description = " A set of services to show people and their tasks";
+     String version = "1.0.0";
+     String termsOfServiceUrl= null;
+     Contact contact = new Contact("Frank Moley", "github.com/fpmoles", "frankmoley@gmail.com");
+     String license = "MIT";
+     String licenseUrl = "https://github.com/fpmoles/talks-spring-swagger/blob/master/LICENSE";
+     Collection<VendorExtension> vendorExtensions = Collections.emptyList();
+     return new ApiInfo(title, description, version, termsOfServiceUrl, contact, license, licenseUrl, vendorExtensions);
+   }
+   **Add API Info to Docket after build**
+
+   Run Application
+    http://localhost:8080/swagger-ui.html
