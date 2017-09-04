@@ -1,0 +1,5 @@
+1. Show initial state of working web service
+  * localhost:8080/people
+  * localhost:8080/people/1
+
+PHASE 1 - Add Swagger
