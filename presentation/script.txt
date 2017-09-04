@@ -52,3 +52,30 @@ Add API Info to Docket
 
    Run Application
     http://localhost:8080/swagger-ui.html
+    Be sure to show all of the documentation at each API, include name (method name) and Responses (default)
+
+3. Phase 3 - Improve specific API documentation & add index
+  Add link to swagger to index page
+  <li class="list-group-item"><a href="swagger-ui.html">Service Documentation</a></li>
+
+  To RestController add
+  Class level annotation: @Api(value="Personal Tasks Services", description = "Services to work with people and their tasks")
+  Method level annotation:
+    @ApiOperation(value = "get all people")
+    @ApiResponses(value={
+            @ApiResponse(code=400, message = "Bad Reqeust")
+    })
+
+    @ApiOperation(value="add person")
+    @ApiResponses(value={
+            @ApiResponse(code=400, message = "Bad Reqeust")
+    })
+
+    @ApiOperation(value="get person and tasks")
+    @ApiResponses(value={
+            @ApiResponse(code=400, message = "Bad Reqeust")
+    })
+
+    Run Application
+     http://localhost:8080/swagger-ui.html
+     Show all that has changed
